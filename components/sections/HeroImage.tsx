@@ -50,10 +50,10 @@ export default function HeroImage() {
         {/* floating badge */}
         <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-xl border border-divider bg-ink/90 px-4 py-2 text-center shadow-lg backdrop-blur-md">
           <p className="font-display text-sm font-semibold text-textprimary">
-            Senior Manager · SCM
+            AI & ML Engineer
           </p>
           <p className="font-mono text-[10px] uppercase tracking-wide text-accent">
-            Jakson Limited
+            IIIT Lucknow
           </p>
         </div>
       </div>

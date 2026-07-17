@@ -90,7 +90,7 @@ export const profile: Profile = {
   github: "github.com/sakshivedi-1",
   githubUrl: "https://github.com/sakshivedi-1",
   resumeUrl: "/Sakshi_vedi_CV2.pdf",
-  photo: "/sakshi_image.jpeg",
+  photo: "/Sakshi_picture.jpeg",
 };
 
 export const stats: Stat[] = [
