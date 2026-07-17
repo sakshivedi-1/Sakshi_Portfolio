@@ -1,0 +1,212 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* shadcn base mappings */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* ── Nitish Agrawal portfolio design tokens ── */
+  --color-ink: #050f1a;
+  --color-ink2: #0d1f33;
+  --color-panel: #122440;
+  --color-divider: #1a3352;
+  --color-accent: #00c2ff;
+  --color-sky: #38bdf8;
+  --color-brass: #c9922a;
+  --color-brass-soft: #2a1e08;
+  --color-textprimary: #e2eef8;
+  --color-textmuted: #6b8ca8;
+  --color-textsub: #3e6080;
+
+  /* font families (bound to next/font CSS variables in app/layout.tsx) */
+  --font-sans: var(--font-body), "Inter", sans-serif;
+  --font-display: var(--font-display), "Space Grotesk", sans-serif;
+  --font-body: var(--font-body), "Inter", sans-serif;
+  --font-mono: var(--font-mono), "IBM Plex Mono", monospace;
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent-foreground: #050f1a;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* exposed for SVG fills / gradients */
+  --accent: #00c2ff;
+}
+
+.dark {
+  /* portfolio runs dark-first: map shadcn surfaces onto the ink palette */
+  --background: #050f1a;
+  --foreground: #e2eef8;
+  --card: #0d1f33;
+  --card-foreground: #e2eef8;
+  --popover: #0d1f33;
+  --popover-foreground: #e2eef8;
+  --primary: #00c2ff;
+  --primary-foreground: #050f1a;
+  --secondary: #122440;
+  --secondary-foreground: #e2eef8;
+  --muted: #122440;
+  --muted-foreground: #6b8ca8;
+  --accent-foreground: #050f1a;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #1a3352;
+  --input: #1a3352;
+  --ring: #00c2ff;
+  --chart-1: #00c2ff;
+  --chart-2: #38bdf8;
+  --chart-3: #c9922a;
+  --chart-4: #6b8ca8;
+  --chart-5: #3e6080;
+  --sidebar: #0d1f33;
+  --sidebar-foreground: #e2eef8;
+  --sidebar-primary: #00c2ff;
+  --sidebar-primary-foreground: #050f1a;
+  --sidebar-accent: #122440;
+  --sidebar-accent-foreground: #e2eef8;
+  --sidebar-border: #1a3352;
+  --sidebar-ring: #00c2ff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    background-color: #050f1a;
+    color: #e2eef8;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  /* keyboard focus ring in accent cyan */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+/* thin custom scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1a3352 transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1a3352;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3e6080;
+}
+
+/* loading skeleton shimmer (used behind the hero portrait while it decodes) */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #0d1f33 0%,
+    #1a3352 50%,
+    #0d1f33 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+}
+
+/* respect reduced-motion: drop all animation & transition */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
